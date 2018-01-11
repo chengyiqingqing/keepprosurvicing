@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "F:\\androidwork\\keepProcessLive\\keepProcessLiving\\app\\build\\intermediates\\res\\merged\\debug\\xml\\authenticator.xml",
+        "source": "F:\\androidwork\\keepProcessLive\\keepProcessLiving\\app\\src\\main\\res\\xml\\authenticator.xml"
+    },
+    {
+        "merged": "F:\\androidwork\\keepProcessLive\\keepProcessLiving\\app\\build\\intermediates\\res\\merged\\debug\\xml\\sync.xml",
+        "source": "F:\\androidwork\\keepProcessLive\\keepProcessLiving\\app\\src\\main\\res\\xml\\sync.xml"
+    }
+]

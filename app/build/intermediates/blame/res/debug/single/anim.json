@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "F:\\androidwork\\keepProcessLive\\keepProcessLiving\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\ec991aec2e2efba2c5902b66ff1e9ca9f51e9f10\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "F:\\androidwork\\keepProcessLive\\keepProcessLiving\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\ec991aec2e2efba2c5902b66ff1e9ca9f51e9f10\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "F:\\androidwork\\keepProcessLive\\keepProcessLiving\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\ec991aec2e2efba2c5902b66ff1e9ca9f51e9f10\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "F:\\androidwork\\keepProcessLive\\keepProcessLiving\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\ec991aec2e2efba2c5902b66ff1e9ca9f51e9f10\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "F:\\androidwork\\keepProcessLive\\keepProcessLiving\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\ec991aec2e2efba2c5902b66ff1e9ca9f51e9f10\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "F:\\androidwork\\keepProcessLive\\keepProcessLiving\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\ec991aec2e2efba2c5902b66ff1e9ca9f51e9f10\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "F:\\androidwork\\keepProcessLive\\keepProcessLiving\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\ec991aec2e2efba2c5902b66ff1e9ca9f51e9f10\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "F:\\androidwork\\keepProcessLive\\keepProcessLiving\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\ec991aec2e2efba2c5902b66ff1e9ca9f51e9f10\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "F:\\androidwork\\keepProcessLive\\keepProcessLiving\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\ec991aec2e2efba2c5902b66ff1e9ca9f51e9f10\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "F:\\androidwork\\keepProcessLive\\keepProcessLiving\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\ec991aec2e2efba2c5902b66ff1e9ca9f51e9f10\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    }
+]
