@@ -28,6 +28,7 @@ public class OnePixLiveService extends Service{
         Log.e(TAG, "OnePixLiveService --- onStartCommand: 一个像素的服务走起来。" );
         //screenManager类就是一个Java类用来持有LiveActivity类对象，并控制开启和销毁。（传入这个对象，会走activity的生命周期吗）
         final OnePixActivityManager onePixActivityManager = OnePixActivityManager.getInstance(OnePixLiveService.this);
+
         //屏幕广播的监听。 //自己调用自己，在哪里调用，就在哪里去实现。
         ScreenBroadcastController listener = ScreenBroadcastController.getInstance(this);
         listener.registerListener(new ScreenBroadcastController.ScreenStateListener() {

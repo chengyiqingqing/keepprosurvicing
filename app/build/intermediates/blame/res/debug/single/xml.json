@@ -1,10 +1,10 @@
 [
     {
-        "merged": "F:\\androidwork\\keepProcessLive\\keepProcessLiving\\app\\build\\intermediates\\res\\merged\\debug\\xml\\authenticator.xml",
-        "source": "F:\\androidwork\\keepProcessLive\\keepProcessLiving\\app\\src\\main\\res\\xml\\authenticator.xml"
+        "merged": "E:\\gitwork\\keepprosurviving\\app\\build\\intermediates\\res\\merged\\debug\\xml\\sync.xml",
+        "source": "E:\\gitwork\\keepprosurviving\\keepLiveLib\\build\\intermediates\\bundles\\default\\res\\xml\\sync.xml"
     },
     {
-        "merged": "F:\\androidwork\\keepProcessLive\\keepProcessLiving\\app\\build\\intermediates\\res\\merged\\debug\\xml\\sync.xml",
-        "source": "F:\\androidwork\\keepProcessLive\\keepProcessLiving\\app\\src\\main\\res\\xml\\sync.xml"
+        "merged": "E:\\gitwork\\keepprosurviving\\app\\build\\intermediates\\res\\merged\\debug\\xml\\authenticator.xml",
+        "source": "E:\\gitwork\\keepprosurviving\\keepLiveLib\\build\\intermediates\\bundles\\default\\res\\xml\\authenticator.xml"
     }
 ]

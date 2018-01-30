@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\gitwork\\keepprosurviving\\keepLiveLib\\build\\intermediates\\res\\merged\\debug\\xml\\authenticator.xml",
+        "source": "E:\\gitwork\\keepprosurviving\\keepLiveLib\\src\\main\\res\\xml\\authenticator.xml"
+    },
+    {
+        "merged": "E:\\gitwork\\keepprosurviving\\keepLiveLib\\build\\intermediates\\res\\merged\\debug\\xml\\sync.xml",
+        "source": "E:\\gitwork\\keepprosurviving\\keepLiveLib\\src\\main\\res\\xml\\sync.xml"
+    }
+]

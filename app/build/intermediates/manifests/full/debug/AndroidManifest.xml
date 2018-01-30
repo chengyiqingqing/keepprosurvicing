@@ -24,16 +24,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity android:name="com.sww.processproject.MainActivity" >
+
+            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            -->
         </activity>
         <activity android:name="com.sww.processproject.onepix.OnePixActivity" />
 
         <service
             android:name="com.sww.processproject.doubleprocess.FirstService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":first" />
+        <service
+            android:name="com.sww.processproject.doubleprocess.FirstService$InnerService"
             android:enabled="true"
             android:exported="true"
             android:process=":first" />
@@ -83,6 +91,103 @@
             android:syncable="true" />
 
         <service android:name="com.sww.processproject.onepix.OnePixLiveService" />
+
+        <activity android:name="com.sww.processproject.Main2Activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sww.processlib.onepix.OnePixActivity" />
+
+        <service
+            android:name="com.sww.processlib.doubleprocess.FirstService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":lib_first" />
+        <service
+            android:name="com.sww.processlib.doubleprocess.FirstService$InnerService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":lib_first" />
+        <service
+            android:name="com.sww.processlib.doubleprocess.SecondService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":lib_second" />
+        <service
+            android:name="com.sww.processlib.doubleprocess.MyJobDaemonService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":lib_live" />
+        <service
+            android:name="com.sww.processlib.alarmliving.LiveAlarmService"
+            android:process=":lib_alarm" />
+        <service
+            android:name="com.sww.processlib.account.AccountAuthenticatorService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+        <service
+            android:name="com.sww.processlib.account.SyncService"
+            android:exported="true"
+            android:process=":lib_sync" >
+
+            <!-- 死的 -->
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <!-- 数据文件 -->
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync" />
+        </service>
+
+        <provider
+            android:name="com.sww.processlib.account.AppAccountProvider"
+            android:authorities="com.sww.processlib"
+            android:exported="false"
+            android:process=":lib_sync"
+            android:syncable="true" />
+
+        <service android:name="com.sww.processlib.onepix.OnePixLiveService" /> <!-- 多进程使用 -->
+        <!--
+            <provider
+            android:name="net.grandcentrix.tray.provider.TrayContentProvider"
+            android:authorities="${CHANNEL_ID}.tray"
+            android:exported="false"
+            android:multiprocess="false"/>
+        -->
+        <!-- 辅助保活使用 -->
+        <service
+            android:name="com.amber.applivelib.live.assist.LiveJobService"
+            android:enabled="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service android:name="com.amber.applivelib.live.assist.LiveAlarmService" /> <!-- 1像素保活方案 -->
+        <activity
+            android:name="com.amber.applivelib.live.assist.ui.OnePiexlActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/OnePixelActivity" /> <!-- 适用于5.0-的方案 -->
+        <service
+            android:name="com.amber.applivelib.live.core.kitkat.LiveServiceK"
+            android:exported="true"
+            android:process=":new_live" />
+        <service
+            android:name="com.amber.applivelib.live.core.kitkat.LiveServiceK$InnerService"
+            android:exported="true"
+            android:process=":new_live" /> <!-- 适用于5.0+的方案 -->
+        <service android:name="com.amber.applivelib.live.core.lollipop.LiveServiceL" />
+        <service android:name="com.amber.applivelib.live.core.lollipop.LiveServiceL$InnerService" />
 
         <meta-data
             android:name="android.support.VERSION"

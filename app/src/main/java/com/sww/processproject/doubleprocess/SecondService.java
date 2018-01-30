@@ -31,6 +31,12 @@ public class SecondService extends Service {
     private MyConn conn;
 
     private static final String TAG = "sww";
+
+    public static void toStartService(Context context){
+        Intent intent=new Intent(context,SecondService.class);
+        context.startService(intent);
+    }
+
     @Override
     public IBinder onBind(Intent intent) {
         return binder;
@@ -99,11 +105,12 @@ public class SecondService extends Service {
             SecondService.this.startService(new Intent(SecondService.this,FirstService.class));
             //绑定FirstService
             SecondService.this.bindService(new Intent(SecondService.this,FirstService.class),conn, Context.BIND_IMPORTANT);
+            SecondService.this.startService(new Intent(SecondService.this,MyJobDaemonService.class));
         }
 
     }
 
-    public static class  InnerService extends Service{
+    /*public static class  InnerService extends Service{
         @Override
         public IBinder onBind(Intent intent) {
             return null;
@@ -122,12 +129,12 @@ public class SecondService extends Service {
                 @Override
                 public void run() {
                     stopForeground(true);
-                    NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-                    manager.cancel(250);
+//                    NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+//                    manager.cancel(250);
                     stopSelf();
                 }
             },100);
         }
-    }
+    }*//**/
 
 }

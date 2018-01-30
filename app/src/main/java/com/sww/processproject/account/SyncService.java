@@ -14,6 +14,12 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
 
+import com.sww.processproject.MainActivity;
+import com.sww.processproject.onepix.OnePixLiveService;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
  * Created by shaowenwen on 2018/1/8.
  */
@@ -22,11 +28,15 @@ public class SyncService extends Service {
 
     private static final Object syncLock = new Object();
     private static SyncAdapter syncAdapter = null;
+    private static int count=0;
     private static final String TAG = "sww";
+    private static Context mContext;
+    private Timer timer;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        timer=new Timer();
         synchronized (syncLock) {
             if (syncAdapter == null) {
                 syncAdapter = new SyncAdapter(getApplicationContext(), true);
@@ -39,7 +49,6 @@ public class SyncService extends Service {
         return syncAdapter.getSyncAdapterBinder();
     }
 
-
     class SyncAdapter extends AbstractThreadedSyncAdapter {
 
         public SyncAdapter(Context context, boolean autoInitialize) {
@@ -51,15 +60,16 @@ public class SyncService extends Service {
             getContext().getContentResolver().notifyChange(AppAccountProvider.CONTENT_URI, null, false);
             //do sync here
             Log.e("sww","onPerformSync");
-            //应用在这里开启。
-            Intent intent = new Intent();
-            ComponentName componentName = new ComponentName(account.type, account.name);
-            intent.setComponent(componentName);
-            getContext().startService(intent);
-            //上面的代码要是没有救他，那么就是它自己活的。
-
-            //既然它不死，但又是隔段时间执行一次的。
-                // 那么我就写一个轮询，来检查当前Service是不是死掉了。
+            // 写一个轮询，来检查当前Service是不是死掉了。
+            count=0;
+            timer.cancel();
+            timer=new Timer();
+            timer.schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    Log.e(TAG, "run: First "+(++count) );
+                }
+            },200,2000);
         }
     }
 
@@ -68,6 +78,7 @@ public class SyncService extends Service {
      * @param context
      */
     public static void startAccountSync(Context context){
+//        mContext=(MainActivity)context;
         Log.e(TAG, "startAccountSync: --- 1" );
         String accountType = "com.sww.processproject";//accountType是包名。
         AccountManager accountManager = (AccountManager) context.getSystemService(Context.ACCOUNT_SERVICE);
@@ -98,7 +109,7 @@ public class SyncService extends Service {
             //AppAccountProvider.CONTENT_URI_BASE
             ContentResolver.requestSync(account, authority, settingsBundle);
 
-        }else {//走了这里，说明我设置的时间间隔没有生效。利用的是系统默认的时间间隔。
+        }else {
             Log.e(TAG, "startAccountSync: --- 4" );
         }
     }

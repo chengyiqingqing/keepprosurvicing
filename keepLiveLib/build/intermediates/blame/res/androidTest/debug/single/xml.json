@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\gitwork\\keepprosurviving\\keepLiveLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\sync.xml",
+        "source": "E:\\gitwork\\keepprosurviving\\keepLiveLib\\build\\intermediates\\bundles\\debug\\res\\xml\\sync.xml"
+    },
+    {
+        "merged": "E:\\gitwork\\keepprosurviving\\keepLiveLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\authenticator.xml",
+        "source": "E:\\gitwork\\keepprosurviving\\keepLiveLib\\build\\intermediates\\bundles\\debug\\res\\xml\\authenticator.xml"
+    }
+]

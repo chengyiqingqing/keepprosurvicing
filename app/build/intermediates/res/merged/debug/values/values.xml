@@ -453,7 +453,10 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <string name="app_name">keepProcessLiving</string>
+    <string name="account_type">com.amber.app.account</string>
+    <string name="app_name">keepPros</string>
+    <string name="content_authority">amber_app_account_auth</string>
+    <string name="live_lib_name">AppLiveLib</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
@@ -1477,6 +1480,9 @@
         <item name="android:background">?attr/controlBackground</item>
         <item name="android:minWidth">56dp</item>
         <item name="android:scaleType">center</item>
+    </style>
+    <style name="OnePixelActivity" parent="android:Theme.Holo.Light.NoActionBar">//无标题
+        <item name="android:windowIsTranslucent">true</item>//透明
     </style>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>

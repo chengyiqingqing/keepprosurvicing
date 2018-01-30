@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="E:\gitwork\keepprosurviving\keepLiveLib\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c7ea505929a583d99fb9131120e6a1539e3bf1f7">
+        <dex dex="E:\gitwork\keepprosurviving\app\build\intermediates\pre-dexed\debug\classes_e4f631af4cfbb9ff934e85b180951aeebf80ae3a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\gitwork\keepprosurviving\applivelib_new\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="fc93ff4e6747734a60130b955c90b14f8bce6180">
+        <dex dex="E:\gitwork\keepprosurviving\app\build\intermediates\pre-dexed\debug\classes_290c4d94ee80eff3b7c23e00564c93cff6e70944.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\gitwork\keepprosurviving\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="12920f9016b8b05acbc2af7cdc13cef6946fe7d3">
+        <dex dex="E:\gitwork\keepprosurviving\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_d3235a48d7884c2aafbeacd58cf737bb2cf5caca\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\gitwork\keepprosurviving\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6a0fe2ed02f059d2c457334f2a545476ad8ef70c">
+        <dex dex="E:\gitwork\keepprosurviving\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_b171e45ebc21cee8934724629419ce0c7fbd2c54\classes.dex" />
+    </item>
+
+</items>

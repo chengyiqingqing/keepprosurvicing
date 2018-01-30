@@ -1,0 +1,8 @@
+<resources>
+    <string name="live_lib_name">AppLiveLib</string>
+
+    <!-- Account Start-->
+    <string name="content_authority">amber_app_account_auth</string>
+    <string name="account_type">com.amber.app.account</string>
+    <!-- Account End-->
+</resources>

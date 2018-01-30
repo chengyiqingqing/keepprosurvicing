@@ -22,6 +22,16 @@ public class MyJobDaemonService extends JobService {
     //服务id对吗？
     private int kJobId = 0;
     private static final String TAG = "sww";
+    public static boolean isJServiceInstance=true;
+
+    public static void toStartJobService(Context context){
+        if (Build.VERSION.SDK_INT >=Build.VERSION_CODES.LOLLIPOP) {
+            Intent intent=new Intent(context,MyJobDaemonService.class);
+            context.startService(intent);
+        }
+
+    }
+
     /**
      * 1.把作业发送到任务调度中去。
      * @param intent
@@ -45,9 +55,7 @@ public class MyJobDaemonService extends JobService {
         if(!isLocalServiceWork||
                 !isRemoteServiceWork){
             this.startService(new Intent(this,FirstService.class));
-
             this.startService(new Intent(this,SecondService.class));
-
             Log.i("onStartJob", "启动FirstService SecondService");
         }else{
             Log.e(TAG, "onStartJob走了:但是没启动Service！！！ " );

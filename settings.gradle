@@ -1,1 +1,4 @@
 include ':app'
+include ':keepLiveLib'
+include ':applivelib'
+include ':applivelib_new'

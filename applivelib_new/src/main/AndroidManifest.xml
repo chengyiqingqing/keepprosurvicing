@@ -1,0 +1,51 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.amber.applivelib.live">
+
+    <!--JOBService需要这这个权限-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true">
+
+        <!--多进程使用-->
+        <!--<provider
+            android:name="net.grandcentrix.tray.provider.TrayContentProvider"
+            android:authorities="${CHANNEL_ID}.tray"
+            android:exported="false"
+            android:multiprocess="false"/>-->
+
+        <!--辅助保活使用-->
+        <service
+            android:name=".assist.LiveJobService"
+            android:enabled="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+
+        <service
+            android:name=".assist.LiveAlarmService"/>
+        <!-- 1像素保活方案 -->
+        <activity
+            android:name=".assist.ui.OnePiexlActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/OnePixelActivity"/>
+        <!-- 适用于5.0-的方案-->
+        <service
+            android:name=".core.kitkat.LiveServiceK"
+            android:exported="true"
+            android:process=":new_live"/>
+
+        <service
+            android:name=".core.kitkat.LiveServiceK$InnerService"
+            android:exported="true"
+            android:process=":new_live"/>
+
+        <!-- 适用于5.0+的方案-->
+        <service
+            android:name=".core.lollipop.LiveServiceL"/>
+
+        <service
+            android:name=".core.lollipop.LiveServiceL$InnerService"/>
+
+    </application>
+
+</manifest>

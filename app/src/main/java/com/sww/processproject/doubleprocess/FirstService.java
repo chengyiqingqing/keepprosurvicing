@@ -29,7 +29,12 @@ public class FirstService extends Service {
     private MyConn conn;
 
     private static final String TAG = "sww";
-    
+
+    public static void toStartService(Context context){
+        Intent intent=new Intent(context,FirstService.class);
+        context.startService(intent);
+    }
+
     @Override
     public IBinder onBind(Intent intent) {
         return binder;
@@ -48,7 +53,8 @@ public class FirstService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         super.onStartCommand(intent, flags, startId);
-        startService(new Intent(this,MyJobDaemonService.class));
+//        startService(new Intent(this,MyJobDaemonService.class));
+
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -59,11 +65,14 @@ public class FirstService extends Service {
         //前台服务。提高当前service的优先级。
         Notification.Builder builder = new Notification.Builder(this);
         builder.setSmallIcon(R.mipmap.ic_launcher);
+        builder.setContentTitle("test");
+        builder.setContentText("description");
         startForeground(250, builder.build());
+        startService(new Intent(this,InnerService.class));
         //开启第二服务。
 //        startService(new Intent(this,SecondService.class));
         //绑定第二服务。
-        FirstService.this.bindService(new Intent(this,SecondService.class),conn, Context.BIND_IMPORTANT);
+//        FirstService.this.bindService(new Intent(this,SecondService.class),conn, Context.BIND_IMPORTANT);
         return START_STICKY;
     }
 
@@ -97,6 +106,7 @@ public class FirstService extends Service {
             FirstService.this.startService(new Intent(FirstService.this,SecondService.class));
             //绑定FirstService
             FirstService.this.bindService(new Intent(FirstService.this,SecondService.class),conn, Context.BIND_AUTO_CREATE);
+            FirstService.this.startService(new Intent(FirstService.this,MyJobDaemonService.class));
         }
     }
 
@@ -111,9 +121,9 @@ public class FirstService extends Service {
             super.onCreate();
             Log.e("InnerService","Service");
             //发送与KeepLiveService中ID相同的Notification，然后将其取消并取消自己的前台显示
-            Notification.Builder builder = new Notification.Builder(this);
-            builder.setSmallIcon(R.mipmap.ic_launcher);
-            startForeground(250, builder.build());
+//            Notification.Builder builder = new Notification.Builder(this);
+//            builder.setSmallIcon(R.mipmap.ic_launcher);
+//            startForeground(250, builder.build());
             //这里将它在0.1s之后取消掉就可以了。
             new Handler().postDelayed(new Runnable() {
                 @Override
